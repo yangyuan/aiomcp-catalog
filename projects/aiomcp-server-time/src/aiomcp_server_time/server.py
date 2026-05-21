@@ -29,7 +29,7 @@ TIME_TOOL_ANNOTATIONS = {
 }
 
 
-SERVER_NAME = "mcp-time"
+SERVER_NAME = "aiomcp-time-server"
 
 
 def get_timezone(timezone_name: str) -> ZoneInfo:

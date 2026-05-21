@@ -7,6 +7,7 @@ import pytest
 
 from aiomcp import McpClient, McpServer
 from aiomcp_server_time.server import (
+    SERVER_NAME,
     convert_time,
     get_current_time,
     get_local_timezone,
@@ -28,7 +29,7 @@ def freeze_time(test_time: str):
 
 
 async def create_test_server(local_timezone: str | None = None) -> McpServer:
-    server = McpServer("mcp-time")
+    server = McpServer(SERVER_NAME)
     await register_tools(server, local_timezone=local_timezone)
     return server
 
